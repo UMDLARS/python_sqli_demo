@@ -14,8 +14,9 @@ id = input("Enter your id: ")
 conn = sqlite3.connect("grades.db")
 
 # Create query.
-query = f"sqlite3 grades.db \"SELECT grade FROM grades WHERE user = \'{username}\' AND pass = \'{password}\' AND id = {id};\""
+query = f"SELECT grade FROM grades WHERE user = \'{username}\' AND pass = \'{password}\' AND id = {id};"
 print(query)
 
 # Invoke query.
-os.system(query)
+print("Your average grade is: ", end = "", flush=True)
+os.system(f"sqlite3 grades.db \"{query}\"")

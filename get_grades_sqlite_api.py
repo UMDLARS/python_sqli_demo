@@ -18,4 +18,4 @@ print(query)
 result = conn.execute(query)
 
 # Print user's grade.
-print(result.fetchall())
+print(f"Your average grade is: {result.fetchone()[0]}")

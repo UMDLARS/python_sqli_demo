@@ -18,4 +18,4 @@ params = (username, password, id)
 result = conn.execute("SELECT grade FROM grades WHERE user = ? AND pass = ? AND id = ?", params)
 
 # Print user's grade.
-print(result.fetchall())
+print(f"Your average grade is: {result.fetchone()[0]}")
