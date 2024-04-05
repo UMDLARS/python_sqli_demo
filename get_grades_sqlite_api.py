@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sqlite3
 
 # Ask user for their username.
