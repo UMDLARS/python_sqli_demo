@@ -11,9 +11,6 @@ password = input("Enter your password: ")
 # Ask user for their ID.
 id = input("Enter your id: ")
 
-# Open SQLite3 db.
-conn = sqlite3.connect("grades.db")
-
 # Create query.
 query = f"SELECT grade FROM grades WHERE user = \'{username}\' AND pass = \'{password}\' AND id = {id};"
 print(query)
